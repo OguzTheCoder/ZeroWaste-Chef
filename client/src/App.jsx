@@ -16,11 +16,7 @@ function AppRoutes() {
       <Route path="/login" element={<GirisSayfasi />} />
       <Route 
         path="/" 
-        element={
-          <ProtectedRoute>
-            <YuklemeSayfasi />
-          </ProtectedRoute>
-        } 
+        element={<YuklemeSayfasi />} 
       />
     </Routes>
   );
