@@ -3,27 +3,28 @@
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Inter', sans-serif;
-  color: #f8fafc;
+  color: #1e293b; /* Dark slate for overall text */
 }
 
 .geri-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05); /* Dark bg for light theme */
+  color: #475569; /* Darker slate */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-size: 0.95rem;
   cursor: pointer;
   margin-bottom: 2rem;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .geri-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #f8fafc;
+  background: rgba(0, 0, 0, 0.1);
+  color: #0f172a;
 }
 
 .tarif-baslik-alani {
@@ -38,14 +39,14 @@
   height: 400px;
   object-fit: cover;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .tarif-isim {
   font-size: 3.5rem;
   margin: 0;
-  background: linear-gradient(to right, #a855f7, #ec4899);
+  background: linear-gradient(to right, #7e22ce, #be185d); /* Darker gradient for light bg */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -1px;
@@ -68,17 +69,18 @@
   border-radius: 20px;
   padding: 2.5rem;
   border: 1px solid rgba(168, 85, 247, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .bolum-basligi {
   font-size: 1.5rem;
-  color: #e2e8f0;
+  color: #1e293b; /* Dark slate */
   margin-top: 0;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  font-weight: 700;
 }
 
 .adim-listesi {
@@ -96,7 +98,7 @@
 }
 
 .adim-no {
-  background: linear-gradient(135deg, #a855f7, #ec4899);
+  background: linear-gradient(135deg, #7e22ce, #be185d); /* Darker purple */
   color: white;
   width: 32px;
   height: 32px;
@@ -107,14 +109,15 @@
   font-weight: bold;
   flex-shrink: 0;
   font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 10px rgba(126, 34, 206, 0.3);
 }
 
 .adim-metin {
-  color: #6b21a8;
+  color: #6b21a8; /* Dark purple */
   line-height: 1.6;
   font-size: 1.05rem;
   margin-top: 0.2rem;
+  font-weight: 500; /* Bolder text for readability */
 }
 
 /* Besin Degerleri Paneli CSS */
@@ -124,7 +127,7 @@
   border-radius: 20px;
   padding: 2rem;
   border: 1px solid rgba(168, 85, 247, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 2rem;
 }
@@ -147,31 +150,33 @@
 
 .makro-kutu:hover {
   transform: translateY(-2px);
-  border-color: rgba(168, 85, 247, 0.3);
+  border-color: rgba(168, 85, 247, 0.4);
 }
 
 .makro-isim {
   display: block;
   font-size: 0.85rem;
-  color: #6b21a8;
+  color: #6b21a8; /* Dark purple */
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .makro-deger {
   display: block;
   font-size: 1.8rem;
-  font-weight: 700;
-  color: #f1f5f9;
+  font-weight: 800; /* Extra bold */
+  color: #1e293b; /* Very dark slate */
 }
 
 .mikro-bolum h4 {
-  color: #6b21a8;
+  color: #6b21a8; /* Dark purple */
   margin-bottom: 1rem;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .mikro-liste {
@@ -183,13 +188,14 @@
 .mikro-satir {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1); /* Darker dashed border */
   padding-bottom: 0.5rem;
-  color: #cbd5e1;
+  color: #334155; /* Dark slate */
   font-size: 1rem;
+  font-weight: 500;
 }
 
 .mikro-satir span:last-child {
-  font-weight: 600;
-  color: #a855f7;
+  font-weight: 700;
+  color: #6b21a8; /* Dark purple */
 }
