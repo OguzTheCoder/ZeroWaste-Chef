@@ -1,0 +1,148 @@
+.tarif-listesi-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #f8fafc;
+}
+
+.sayfa-baslik {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.filtre-cubugu {
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.filtre-secenek {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #e2e8f0;
+  user-select: none;
+}
+
+.filtre-secenek input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #a855f7;
+  cursor: pointer;
+}
+
+.tarif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tarif-karti {
+  background: rgba(30, 41, 59, 0.7);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarif-karti:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.tarif-resim {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tarif-icerik {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarif-ad {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  color: #f1f5f9;
+}
+
+.tarif-puan {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  padding: 0.4rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  align-self: flex-start;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.eksik-malzemeler {
+  margin-top: auto;
+}
+
+.eksik-malzemeler h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.eksik-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eksik-etiket {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  font-size: 1.2rem;
+  color: #a855f7;
+  gap: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  color: #94a3b8;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}

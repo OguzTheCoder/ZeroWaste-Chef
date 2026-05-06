@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import GirisSayfasi from './pages/GirisSayfasi';
 import YuklemeSayfasi from './pages/YuklemeSayfasi';
+import TarifListesi from './pages/TarifListesi';
 import './App.css';
 
 // Korumalı Rota Bileşeni
@@ -17,6 +18,10 @@ function AppRoutes() {
       <Route 
         path="/" 
         element={<YuklemeSayfasi />} 
+      />
+      <Route 
+        path="/recipes" 
+        element={<TarifListesi />} 
       />
     </Routes>
   );
