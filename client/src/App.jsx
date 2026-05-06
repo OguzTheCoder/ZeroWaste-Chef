@@ -18,15 +18,27 @@ function AppRoutes() {
       <Route path="/login" element={<GirisSayfasi />} />
       <Route 
         path="/" 
-        element={<YuklemeSayfasi />} 
+        element={
+          <ProtectedRoute>
+            <YuklemeSayfasi />
+          </ProtectedRoute>
+        } 
       />
       <Route 
         path="/recipes" 
-        element={<TarifListesi />} 
+        element={
+          <ProtectedRoute>
+            <TarifListesi />
+          </ProtectedRoute>
+        } 
       />
       <Route 
         path="/tarif/:id" 
-        element={<TarifDetayi />} 
+        element={
+          <ProtectedRoute>
+            <TarifDetayi />
+          </ProtectedRoute>
+        } 
       />
     </Routes>
   );

@@ -63,6 +63,10 @@ const SesliAsistan = ({ recipeId }) => {
 
     return () => {
       recognition.stop();
+      // Sayfa değiştiğinde konuşmayı kes (Memory Leak & Ghost Voice önleme)
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
     };
   }, [recipeId]);
 
@@ -75,8 +79,15 @@ const SesliAsistan = ({ recipeId }) => {
       try {
         recognitionRef.current?.start();
       } catch (e) {
+        // Eğer zaten başlatılmışsa önce durdurup sonra başlat
         recognitionRef.current?.stop();
-        setTimeout(() => recognitionRef.current?.start(), 100);
+        setTimeout(() => {
+          try {
+            recognitionRef.current?.start();
+          } catch (err) {
+            console.error("Yeniden başlatma hatası:", err);
+          }
+        }, 200);
       }
     }
   };

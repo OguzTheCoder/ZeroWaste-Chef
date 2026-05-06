@@ -25,6 +25,18 @@ api.interceptors.request.use(
   }
 );
 
+// Yanıt interceptor'ı: 401 hatası (token süresi dolması vb.) durumunda kullanıcıyı login'e atar
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      inMemoryToken = null;
+      window.location.href = '/login';
+    }
+    return Promise.reject(error);
+  }
+);
+
 // Mevcut api sarmalayıcıları
 export const analyzeImage = async (base64Image) => {
   const response = await api.post('/analyze', { image: base64Image });
