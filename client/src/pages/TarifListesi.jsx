@@ -45,7 +45,7 @@ const TarifListesi = () => {
           {
             id: '2',
             name: 'Sebzeli Krep',
-            image: 'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=500&q=80',
+            image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?w=500&q=80',
             matchScore: 80,
             missingIngredients: ['Un', 'Zeytinyağı'],
             isFast: true,

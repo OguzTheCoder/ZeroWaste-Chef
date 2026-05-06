@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getNutrition } from '../api';
 import BesinDegerleriPaneli from '../components/BesinDegerleriPaneli';
+import SesliAsistan from '../components/SesliAsistan';
 import './TarifDetayi.css';
 
 const TarifDetayi = () => {
@@ -20,11 +21,6 @@ const TarifDetayi = () => {
       try {
         /*
          * NOT: Backend sunucusu aktif olmadığından API çağrıları yerine mock veri kullanıyoruz.
-         * Backend aktifleştiğinde aşağıdaki gibi çalışacak:
-         * 
-         * const nutritionData = await getNutrition(id);
-         * setNutrition(nutritionData);
-         * // Ayrıca tarifi getiren bir endpoint de yazılmalı
          */
         
         // MOCK VERİ (Gerçekçi bir bekleme süresi):
@@ -32,7 +28,7 @@ const TarifDetayi = () => {
           setRecipe({
             id: id,
             name: id === '1' ? 'Menemen' : (id === '2' ? 'Sebzeli Krep' : 'Örnek Tarif'),
-            image: id === '1' ? 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1000&q=80' : 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1000&q=80',
+            image: id === '1' ? 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1000&q=80' : (id === '2' ? 'https://images.unsplash.com/photo-1519676867240-f03562e64548?w=1000&q=80' : 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=1000&q=80'),
             steps: [
               "Domateslerin kabuklarını soyun ve küp küp doğrayın.",
               "Yeşil biberleri ince ince kıyın.",
@@ -61,7 +57,7 @@ const TarifDetayi = () => {
 
       } catch (err) {
         console.error("Detaylar alınırken hata:", err);
-        setError("Tarif detayları ve besin değerleri yüklenemedi. Lütfen bağlantınızı kontrol edin.");
+        setError("Tarif detayları ve besin değerleri yüklenemedi.");
         setLoading(false);
       }
     };
@@ -120,6 +116,9 @@ const TarifDetayi = () => {
               </li>
             ))}
           </ul>
+          
+          {/* Sesli Asistan Entegrasyonu */}
+          <SesliAsistan recipeId={id} />
         </div>
 
         <div className="besin-yan-panel">
