@@ -15,7 +15,7 @@ const FiltreCubugu = ({ filters, onFilterChange }) => {
           checked={filters?.lowCalorie || false}
           onChange={handleCheckboxChange}
         />
-        Düşük Kalorili
+        🥗 Düşük Kalorili (&lt; 500 kcal)
       </label>
       <label className="filtre-secenek">
         <input
@@ -24,7 +24,7 @@ const FiltreCubugu = ({ filters, onFilterChange }) => {
           checked={filters?.fast || false}
           onChange={handleCheckboxChange}
         />
-        Hızlı Tarif
+        ⏱️ Hızlı Tarif (&lt; 30 dk)
       </label>
     </div>
   );
