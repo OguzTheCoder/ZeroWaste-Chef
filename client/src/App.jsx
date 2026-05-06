@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import GirisSayfasi from './pages/GirisSayfasi';
 import YuklemeSayfasi from './pages/YuklemeSayfasi';
 import TarifListesi from './pages/TarifListesi';
+import TarifDetayi from './pages/TarifDetayi';
 import './App.css';
 
 // Korumalı Rota Bileşeni
@@ -22,6 +23,10 @@ function AppRoutes() {
       <Route 
         path="/recipes" 
         element={<TarifListesi />} 
+      />
+      <Route 
+        path="/tarif/:id" 
+        element={<TarifDetayi />} 
       />
     </Routes>
   );

@@ -1,0 +1,195 @@
+.tarif-detayi-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #f8fafc;
+}
+
+.geri-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease;
+}
+
+.geri-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+.tarif-baslik-alani {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tarif-detay-resim {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tarif-isim {
+  font-size: 3.5rem;
+  margin: 0;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.icerik-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .icerik-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.adims-kart {
+  background: rgba(168, 85, 247, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bolum-basligi {
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.adim-listesi {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.adim-madde {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.adim-no {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.4);
+}
+
+.adim-metin {
+  color: #d8b4fe;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-top: 0.2rem;
+}
+
+/* Besin Degerleri Paneli CSS */
+.besin-paneli {
+  background: rgba(168, 85, 247, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 2rem;
+}
+
+.makro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.makro-kutu {
+  background: rgba(168, 85, 247, 0.15);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.makro-kutu:hover {
+  transform: translateY(-2px);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.makro-isim {
+  display: block;
+  font-size: 0.85rem;
+  color: #d8b4fe;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.makro-deger {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.mikro-bolum h4 {
+  color: #d8b4fe;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mikro-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.mikro-satir {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.mikro-satir span:last-child {
+  font-weight: 600;
+  color: #a855f7;
+}
