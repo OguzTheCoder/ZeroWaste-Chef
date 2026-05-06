@@ -15,19 +15,19 @@ const BesinDegerleriPaneli = ({ nutrition }) => {
       <div className="makro-grid">
         <div className="makro-kutu">
           <span className="makro-isim">Kalori</span>
-          <span className="makro-deger">{nutrition.calories} <span style={{fontSize: '1rem', color: '#d8b4fe'}}>kcal</span></span>
+          <span className="makro-deger">{nutrition.calories} <span style={{fontSize: '1rem', color: '#6b21a8'}}>kcal</span></span>
         </div>
         <div className="makro-kutu">
           <span className="makro-isim">Protein</span>
-          <span className="makro-deger">{nutrition.protein}<span style={{fontSize: '1rem', color: '#d8b4fe'}}>g</span></span>
+          <span className="makro-deger">{nutrition.protein}<span style={{fontSize: '1rem', color: '#6b21a8'}}>g</span></span>
         </div>
         <div className="makro-kutu">
           <span className="makro-isim">Karbonhidrat</span>
-          <span className="makro-deger">{nutrition.carbs}<span style={{fontSize: '1rem', color: '#d8b4fe'}}>g</span></span>
+          <span className="makro-deger">{nutrition.carbs}<span style={{fontSize: '1rem', color: '#6b21a8'}}>g</span></span>
         </div>
         <div className="makro-kutu">
           <span className="makro-isim">Yağ</span>
-          <span className="makro-deger">{nutrition.fat}<span style={{fontSize: '1rem', color: '#d8b4fe'}}>g</span></span>
+          <span className="makro-deger">{nutrition.fat}<span style={{fontSize: '1rem', color: '#6b21a8'}}>g</span></span>
         </div>
       </div>
 
